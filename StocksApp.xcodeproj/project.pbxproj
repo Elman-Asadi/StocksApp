@@ -15,6 +15,8 @@
 		85693E9F26DF488B00297879 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85693E9D26DF488B00297879 /* LaunchScreen.storyboard */; };
 		85693EA826DF4A7C00297879 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85693EA726DF4A7C00297879 /* WebService.swift */; };
 		85693EAB26DF4CA100297879 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85693EAA26DF4CA100297879 /* Stock.swift */; };
+		85693EAE26DF58AB00297879 /* StockListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85693EAD26DF58AB00297879 /* StockListViewModel.swift */; };
+		85693EB026DF590500297879 /* StockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85693EAF26DF590400297879 /* StockViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		85693EA026DF488B00297879 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85693EA726DF4A7C00297879 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		85693EAA26DF4CA100297879 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		85693EAD26DF58AB00297879 /* StockListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewModel.swift; sourceTree = "<group>"; };
+		85693EAF26DF590400297879 /* StockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		85693E9126DF488A00297879 /* StocksApp */ = {
 			isa = PBXGroup;
 			children = (
+				85693EAC26DF586500297879 /* ViewModels */,
 				85693EA926DF4C7600297879 /* Models */,
 				85693EA626DF4A4D00297879 /* Services */,
 				85693E9226DF488A00297879 /* AppDelegate.swift */,
@@ -95,6 +100,15 @@
 				85693EAA26DF4CA100297879 /* Stock.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		85693EAC26DF586500297879 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				85693EAD26DF58AB00297879 /* StockListViewModel.swift */,
+				85693EAF26DF590400297879 /* StockViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				85693E9326DF488A00297879 /* AppDelegate.swift in Sources */,
+				85693EAE26DF58AB00297879 /* StockListViewModel.swift in Sources */,
 				85693E9526DF488A00297879 /* SceneDelegate.swift in Sources */,
 				85693EA826DF4A7C00297879 /* WebService.swift in Sources */,
 				85693EAB26DF4CA100297879 /* Stock.swift in Sources */,
 				85693E9726DF488A00297879 /* ContentView.swift in Sources */,
+				85693EB026DF590500297879 /* StockViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
