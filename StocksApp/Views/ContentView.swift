@@ -27,8 +27,9 @@ struct ContentView: View {
         }
         
         return NavigationView {
-            
+        
             ZStack(alignment: .leading) {
+                
                 Color.black
                     .edgesIgnoringSafeArea(.all)
                 
@@ -43,7 +44,21 @@ struct ContentView: View {
                     .offset(y: -265)
                 
                 StockListView(stocks: filteredStocks)
-                    .offset(y: 95)
+                    .offset(y: 200)
+                
+                NewsArticleView(newsArticles:  self.stockListVM.news, onDragBeggin: {value in
+                    stockListVM.dragOffset = value.translation
+                }, onDragEnd: {value in
+                    if value.translation.height < 0 {
+                        self.stockListVM.dragOffset = CGSize(width: 0, height: 100)
+                    } else {
+                        self.stockListVM.dragOffset = CGSize(width: 0, height: 500)
+                    }
+                })
+                .animation(.spring())
+                .offset(y: self.stockListVM.dragOffset.height)
+                
+                
                 
             }
             .navigationTitle("Stocks")

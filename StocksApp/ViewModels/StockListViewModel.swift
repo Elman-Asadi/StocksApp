@@ -5,16 +5,18 @@
 //  Created by Elman Asadi on 9/1/21.
 //
 
-import Foundation
+import SwiftUI
 
 class StockListViewModel : ObservableObject {
     
+    @Published var dragOffset : CGSize = CGSize(width: 0.0, height: 100)
     @Published var searchTerm : String = ""
     @Published var stocks : [StockViewModel] = [StockViewModel]()
     @Published var news : [NewsArticleViewModel] = [NewsArticleViewModel]()
     
     func load() {
         fetchStocks()
+        fetchNews()
     }
     
     // ======= Fetch News =======
